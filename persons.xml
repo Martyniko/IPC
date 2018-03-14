@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persons>
+    <Person>
+        <id>1</id>
+        <imagen>LLoroso.png</imagen>
+        <nombre>John Doe</nombre>
+        <residencia>
+            <ciudad>Valencia</ciudad>
+            <provincia>Valencia</provincia>
+        </residencia>
+    </Person>
+    <Person>
+        <id>2</id>
+        <imagen>Pregunta.png</imagen>
+        <nombre>Janes Doe</nombre>
+        <residencia>
+            <ciudad>Valencia</ciudad>
+            <provincia>Valencia</provincia>
+        </residencia>
+    </Person>
+    <Person>
+        <id>3</id>
+        <imagen>Sonriente.png</imagen>
+        <nombre>Peter Doe</nombre>
+        <residencia>
+            <ciudad>Valencia</ciudad>
+            <provincia>Valencia</provincia>
+        </residencia>
+    </Person>
+</persons>
