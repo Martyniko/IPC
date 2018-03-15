@@ -5,6 +5,7 @@
  */
 package controller;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.beans.binding.Bindings;
@@ -23,7 +24,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import model.Person;
 import model.Residencia;
-import practica3.pkg2.Practica3E2;
+import Application.Practica3E2V2M;
 
 /**
  * FXML Controller class
@@ -32,7 +33,7 @@ import practica3.pkg2.Practica3E2;
  */
 public class FXMLDocumentController implements Initializable {
     private Stage primaryStage;
-    private Practica3E2 mainApp;
+    private Practica3E2V2M mainApp;
     private Person persona;
     @FXML private Button Añadir;
     @FXML private Button Modificar;
@@ -67,7 +68,6 @@ public class FXMLDocumentController implements Initializable {
         imagenColumn.setCellFactory(columna -> {
             return new TableCell<Person,String> () {
                 private final ImageView view = new ImageView();
-                @Override
                 protected void updateItem(String item, boolean empty) {
                     super.updateItem(item, empty);
                     if (item == null || empty) setGraphic(null);
@@ -89,23 +89,32 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML private void añadir(ActionEvent event) {
         Person newItem = new Person();
-        boolean okAccion = mainApp.showVentanaPersona(newItem,"Añadir");
+        boolean okAccion = mainApp.showAVentanaPersona(newItem,"Añadir");
         if (okAccion) {
                 lpersonas.getItems().add(newItem);
                 lpersonas.getSelectionModel().selectLast();
         }
     }
-    
+     
+    @FXML private void  guardar(ActionEvent event) {
+        File personFile = mainApp.getPersonFilePath();
+        if (personFile != null) {
+            mainApp.savePersonToXML(personFile);
+        } else {
+            mainApp.saveAsPersonToXML();
+        }
+    }
+
     @FXML private void modificar(ActionEvent event) {
-        boolean okAccion = mainApp.showVentanaPersona(persona,"Modificar");
+        boolean okAccion = mainApp.showAVentanaPersona(persona,"Modificar");
     }
 
     @FXML private void borrar(ActionEvent event) {
-        boolean okAccion = mainApp.showVentanaPersona(persona,"Borrar");
+        boolean okAccion = mainApp.showAVentanaPersona(persona,"Borrar");
         if (okAccion) lpersonas.getItems().remove(persona);
     }
         
-    public void setMain(Practica3E2 mainApp) {
+    public void setMain(Practica3E2V2M mainApp) {
         this.mainApp = mainApp;
     }
     

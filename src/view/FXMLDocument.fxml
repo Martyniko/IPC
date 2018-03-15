@@ -29,6 +29,11 @@
    <top>
       <HBox alignment="CENTER" prefHeight="44.0" prefWidth="710.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
+            <Button fx:id="guardar" mnemonicParsing="false" onAction="#guardar" prefHeight="25.0" prefWidth="69.0" text="Guardar" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
             <Button fx:id="Modificar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#modificar" prefHeight="25.0" prefWidth="68.0" text="Modificar" textAlignment="CENTER">
                <HBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

@@ -71,8 +71,10 @@ public class FXMLPersonaController implements Initializable {
             this.nombre.setText("");
             this.ciudad.setText("");
             this.provincia.setText("");
-        } else {
+        }
+        else {
             if ("Borrar".equals(accion)) {panelGrid.disableProperty().setValue(true);}
+            
             this.id.setText(this.persona.getId()+"");
             this.nombre.setText(this.persona.getNombre());
             this.ciudad.setText(this.persona.getResidencia().getCiudad());
@@ -106,27 +108,32 @@ public class FXMLPersonaController implements Initializable {
         if (id.getText() == null || id.getText().length() == 0) {
             idMsgError.setText("Id No valido! ");
             isValid=false;
-        } else idMsgError.setText("");
+        }
+        else idMsgError.setText("");
         
         if (nombre.getText() == null || nombre.getText().length() == 0) {
             nombreMsgError.setText("Nombre No valido! ");
             isValid=false;
-        } else nombreMsgError.setText("");
+        }
         
+        else nombreMsgError.setText("");
         if (ciudad.getText() == null || ciudad.getText().length() == 0) {
             ciudadMsgError.setText("Ciudad No valido! ");
             isValid=false;
-        } else ciudadMsgError.setText("");
+        }
+        else ciudadMsgError.setText("");
         
         if (provincia.getText() == null || provincia.getText().length() == 0) {
             provinciaMsgError.setText("Provincia No valido! ");
             isValid=false;
-        } else provinciaMsgError.setText("");
+        }
+        else provinciaMsgError.setText("");
         
         if (imagen.getSelectionModel().getSelectedIndex()==-1) {
             imagenMsgError.setText("Imagen No valido! ");
             isValid=false;
-        } else imagenMsgError.setText("");
+        }
+        else imagenMsgError.setText("");
         
         return isValid;
     }

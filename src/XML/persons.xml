@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persons>
+    <person>
+        <id>1</id>
+        <imagen>LLoroso.png</imagen>
+        <nombre>John Doe</nombre>
+        <residencia>
+            <ciudad>Museros</ciudad>
+            <provincia>Valencia</provincia>
+        </residencia>
+    </person>
+    <person>
+        <id>2</id>
+        <imagen>Sonriente.png</imagen>
+        <nombre>Janes Doe</nombre>
+        <residencia>
+            <ciudad>Valencia</ciudad>
+            <provincia>Valencia</provincia>
+        </residencia>
+    </person>
+    <person>
+        <id>3</id>
+        <imagen>Sonriente.png</imagen>
+        <nombre>Peter Doe</nombre>
+        <residencia>
+            <ciudad>Sagunto</ciudad>
+            <provincia>Valencia</provincia>
+        </residencia>
+    </person>
+    <person>
+        <id>4</id>
+        <imagen>Pregunta.png</imagen>
+        <nombre>James Hill</nombre>
+        <residencia>
+            <ciudad>Mislata</ciudad>
+            <provincia>Valencia</provincia>
+        </residencia>
+    </person>
+    <person>
+        <id>5</id>
+        <imagen>Sonriente.png</imagen>
+        <nombre>Bruce Smith</nombre>
+        <residencia>
+            <ciudad>Morella</ciudad>
+            <provincia>Castellon</provincia>
+        </residencia>
+    </person>
+</persons>
